@@ -37,7 +37,7 @@ const [mensagem, setMensagem] = useState <IMensagemState[]>([]);
         {isLoading ? (
         <LoadingComp />
         ) : (
-        <ImageBackground source={require("../../assets/fundo.png")} style={styles.container}>
+        <View style={styles.container}>
             <SafeAreaView styles={styles.container}>
                 <View style={styles.rowSearch}>
                     <FontAwesome5 name="search" style={styles.icon} />
@@ -51,7 +51,7 @@ const [mensagem, setMensagem] = useState <IMensagemState[]>([]);
                         <Text style={styles.buttonText}>+</Text>
                     </TouchableOpacity>
             </SafeAreaView>
-        </ImageBackground>
+        </View>
         )}
     </>
     );

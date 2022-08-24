@@ -4,7 +4,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import {Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../styles/colors";
 import { ChatScreen, MapScreen, PerfilScreen, SairScreen, CameraScreen, ArquivoScreen } from "../screens";
-import DrawerNavigation from "./drawer.navigation";
+import ChatNavigation from "./chat.navigation";
 
 const Drawer = createDrawerNavigator();
 
@@ -90,6 +90,17 @@ export default function HomeRoute() {
                             color={colors.primary}
                         />
                     ),
+                }}
+            />  
+            <Drawer.Screen
+                name="ChatNavigation"
+                component={ChatNavigation}
+                options={{
+                    title: "Chat",
+                    drawerLabel: "Chat",
+                    drawerIcon: () => (
+                        <Ionicons name="chatbubbles" size={24} color={colors.white} />
+                    )
                 }}
             />  
         </Drawer.Navigator>
